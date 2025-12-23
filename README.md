@@ -1,6 +1,6 @@
 # LSFS - Log-Structured Filesystem
 
-[![Build Status](https://github.com/yourusername/lsfs/workflows/CI/badge.svg)](https://github.com/yourusername/lsfs/actions)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A FUSE-based log-structured filesystem implementation in C, demonstrating modern storage principles and crash recovery mechanisms.
@@ -22,17 +22,17 @@ LSFS (Log-Structured FileSystem) is a userspace filesystem that treats the disk 
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                      USER APPLICATIONS                           │
+│                      USER APPLICATIONS                          │
 └─────────────────────────────────────────────────────────────────┘
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                    LINUX KERNEL (VFS + FUSE)                     │
+│                    LINUX KERNEL (VFS + FUSE)                    │
 └─────────────────────────────────────────────────────────────────┘
                                 │
                                 ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                       LSFS FUSE DAEMON                           │
+│                       LSFS FUSE DAEMON                          │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────┐  │
 │  │ FUSE Ops    │  │ Inode Cache │  │ Directory Operations    │  │
 │  └─────────────┘  └─────────────┘  └─────────────────────────┘  │
